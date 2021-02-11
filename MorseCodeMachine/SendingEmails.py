@@ -1,18 +1,7 @@
-password = "SWCode08!"
-
-
-
-
-
-
-
-
 import smtplib, ssl
 
 port = 465  # For SSL
-#password = input("Type your password and press enter: ")
-#sender_email = input("Your email adress: ")
-receiver_email = input("L'adressa electronica de la persona que ho rebrà: ")
+receiver_email = input("The Receiver Adress: ")
 
 # Create a secure SSL context
 context = ssl.create_default_context()
@@ -109,25 +98,24 @@ Dict = {
         "@":(".--.-."),
         "!":("-.-.--"),
 
-
-
-
-
         " ":("     ")
         }
+
+password = YOUR_PASSWORD
+yourEmail = YOUR_EMAIL_ADRESS
 
 def translate(word): 
     return [Dict[char] for char in word] 
 
-text = input("Hola! Que vols traduir i enviar? " ).lower()
+text = input("Hello! What do you want to convert and send? " ).lower()
 message = str(translate(text))
 #END OF THE MORSE MACHINE CODE
 
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     print("About to login")
-    server.login("sergiwithcode@gmail.com", password)
+    server.login(yourEmail, password)
     print("Logged in")
-    server.sendmail("sergiwithcode@gmail.com", receiver_email , message)
-    print("Enviant " + "'" + message + "'")
+    server.sendmail(yourEmail, receiver_email , message)
+    print(f"Sending {message}")
 
 print("Done!") 
