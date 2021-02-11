@@ -100,6 +100,6 @@ def split(word):
     return [Dict[char] for char in word] 
 
 
-text = split(input("Hola! Que vols traduir? ").lower())
+text = split(input("Hello! What do you want to convert? ").lower())
 
 print(text)
