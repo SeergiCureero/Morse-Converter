@@ -4,6 +4,6 @@ This project has extra files that hopefuly would help you understand how PySeria
 
 However I recomend reading the PySerial documentation
 
-Not all the code is mine but I made this project a long ago and I don't remember where I copied code from. If I remember, I would credit the source 
+Not all the code is mine but I made this project a long ago and I don't remember where I copied code from. If I remember, I will credit the source 
 
 Sorry :(
